@@ -43,6 +43,7 @@ pip install torch transformers pandas beautifulsoup4 sentence-transformers scipy
 2. Pokrenite ByT5-small.ipynb za treniranje glavnog modela.
 3. Za usporedbu rezultata pokrenite Baseline.ipynb.
 
-📝 Dokumentacija
+# 📝 Dokumentacija
 Detaljan opis metodologije, analize rezultata i teorijske podloge nalazi se u priloženoj PDF datoteci:
+
 👉 **[Projekt.pdf](./Projekt.pdf)**
