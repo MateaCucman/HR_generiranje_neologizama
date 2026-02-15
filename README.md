@@ -6,33 +6,25 @@ Ovaj projekt istražuje primjenu metoda dubokog učenja za generiranje novih rij
 # Struktura projekta
 Projekt je podijeljen u tri ključne faze, od kojih je svaka dokumentirana u zasebnoj Jupyter bilježnici:
 
-Korpus.ipynb (Prikupljanje i obrada podataka)
+1. Korpus.ipynb (Prikupljanje i obrada podataka)
 
-Sadrži kod za automatizirano struganje podataka (web scraping) s Hrvatskog jezičnog portala (HJP) pomoću biblioteke BeautifulSoup.
+* Sadrži kod za automatizirano struganje podataka (web scraping) s Hrvatskog jezičnog portala (HJP) pomoću biblioteke BeautifulSoup.
+* Uključuje čišćenje teksta, normalizaciju i integraciju specifične baze neologizama.
+* Rezultira podjelom skupa podataka na train, dev i test skupove (ukupno preko 30,000 uzoraka).
 
-Uključuje čišćenje teksta, normalizaciju i integraciju specifične baze neologizama.
+2. ByT5-small.ipynb (Glavni model)
 
-Rezultira podjelom skupa podataka na train, dev i test skupove (ukupno preko 30,000 uzoraka).
+* Implementacija i dotreniravanje (fine-tuning) ByT5-small modela (arhitektura na razini znakova/bajtova).
+* Model je odabran zbog svoje robusnosti u radu s morfološki bogatim jezicima poput hrvatskog.
+* Sadrži proces treniranja, praćenje funkcije gubitka i generiranje riječi pomoću tehnika uzorkovanja (top_k, top_p).
 
-ByT5-small.ipynb (Glavni model)
+3. Baseline.ipynb (Referentni model i evaluacija)
 
-Implementacija i dotreniravanje (fine-tuning) ByT5-small modela (arhitektura na razini znakova/bajtova).
-
-Model je odabran zbog svoje robusnosti u radu s morfološki bogatim jezicima poput hrvatskog.
-
-Sadrži proces treniranja, praćenje funkcije gubitka i generiranje riječi pomoću tehnika uzorkovanja (top_k, top_p).
-
-Baseline.ipynb (Referentni model i evaluacija)
-
-Implementacija LSTM Sequence-to-Sequence modela koji služi kao osnova (baseline) za usporedbu.
-
-Sadrži detaljnu evaluaciju oba modela koristeći metrike:
-
-3-gram F1 score (strukturna sličnost).
-
-Semantic Similarity (semantička sličnost pomoću Sentence-BERT modela).
-
-Cross-Entropy Loss.
+* Implementacija LSTM Sequence-to-Sequence modela koji služi kao osnova (baseline) za usporedbu.
+* Sadrži detaljnu evaluaciju oba modela koristeći metrike:
+** 3-gram F1 score (strukturna sličnost).
+** Semantic Similarity (semantička sličnost pomoću Sentence-BERT modela).
+** Cross-Entropy Loss.
 
 # 📊 Rezultati
 Glavni model (ByT5) pokazao je značajnu nadmoć nad klasičnim LSTM modelom, posebno u zadržavanju semantičkog smisla i pravilne hrvatske morfologije.
@@ -42,11 +34,9 @@ Glavni model (ByT5) pokazao je značajnu nadmoć nad klasičnim LSTM modelom, po
 | **ByT5-small** | **1.0090** | **0.2748** | **0.7503** |
 
 # 🛠️ Instalacija i korištenje
+  pip install torch transformers pandas beautifulsoup4 sentence-transformers scipy matplotlib
 Da biste pokrenuli projekt lokalno, osigurajte da imate instaliran Python 3.8+ i potrebne biblioteke:
 
-Pokrenite Korpus.ipynb za generiranje CSV datoteka s podacima.
-
-Pokrenite ByT5-small.ipynb za treniranje glavnog modela.
-
-# 👉 Projekt.pdf
-Za usporedbu rezultata pokrenite Baseline.ipynb.
+1. Pokrenite Korpus.ipynb za generiranje CSV datoteka s podacima.
+2. Pokrenite ByT5-small.ipynb za treniranje glavnog modela.
+3. Za usporedbu rezultata pokrenite Baseline.ipynb.
