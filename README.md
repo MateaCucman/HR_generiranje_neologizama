@@ -36,7 +36,7 @@ Glavni model (ByT5) pokazao je značajnu nadmoć nad klasičnim LSTM modelom, po
 # 🛠️ Instalacija i korištenje
 ```bash
 pip install torch transformers pandas beautifulsoup4 sentence-transformers scipy matplotlib
-
+```
 Da biste pokrenuli projekt lokalno, osigurajte da imate instaliran Python 3.8+ i potrebne biblioteke:
 
 1. Pokrenite Korpus.ipynb za generiranje CSV datoteka s podacima.
