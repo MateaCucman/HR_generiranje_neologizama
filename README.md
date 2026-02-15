@@ -22,9 +22,9 @@ Projekt je podijeljen u tri ključne faze, od kojih je svaka dokumentirana u zas
 
 * Implementacija LSTM Sequence-to-Sequence modela koji služi kao osnova (baseline) za usporedbu.
 * Sadrži detaljnu evaluaciju oba modela koristeći metrike:
-** 3-gram F1 score (strukturna sličnost).
-** Semantic Similarity (semantička sličnost pomoću Sentence-BERT modela).
-** Cross-Entropy Loss.
+  * 3-gram F1 score (strukturna sličnost).
+  * Semantic Similarity (semantička sličnost pomoću Sentence-BERT modela).
+  * Cross-Entropy Loss.
 
 # 📊 Rezultati
 Glavni model (ByT5) pokazao je značajnu nadmoć nad klasičnim LSTM modelom, posebno u zadržavanju semantičkog smisla i pravilne hrvatske morfologije.
