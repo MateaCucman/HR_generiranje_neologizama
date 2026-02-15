@@ -46,4 +46,4 @@ pip install torch transformers pandas beautifulsoup4 sentence-transformers scipy
 # 📝 Dokumentacija
 Detaljan opis metodologije, analize rezultata i teorijske podloge nalazi se u priloženoj PDF datoteci:
 
-👉 **[Projekt.pdf](./Projekt.pdf)**
+👉 **[Projekt.pdf](https://drive.google.com/file/d/1uLx76a-eBiumySk9DxOXTz1tXamin6zD/view?usp=sharing)**
